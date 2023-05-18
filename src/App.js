@@ -37,7 +37,7 @@ function App() {
 
   function createTodoItem(todo) {
     return (
-      <div className='bg-[#E4E9FD] rounded-md flex gap-2 items-center px-3 py-3'>
+      <div className='bg-[#E4E9FD] rounded-md flex gap-2 items-center px-3 py-3 todo-item'>
         <input onChange={(e) => handleEditTodo(e.target.value, todo.id)} autoFocus={onEdit ? false : true} onBlur={(e) => {setOnEdit(false)}} readOnly={onEdit ? false : true} className={`paragraph w-[85%] bg-[#0000] border-none focus:outline-none py-1 ${onEdit ? 'border-bottom' : ''}`} value={todo.text} />
         <div className='btn-wrapper bg-white w-[30px] h-[30px] rounded-md flex justify-center items-center cursor-pointer'><Icon onClick={() => {setOnEdit(true)}} icon="system-uicons:write" width={20} color="#A683E3" /></div>
         <div className='btn-wrapper bg-white w-[30px] h-[30px] rounded-md flex justify-center items-center cursor-pointer'><Icon onClick={() => {handleDeleteTodo(todo.id)}} icon="material-symbols:delete-outline-rounded" width={20} color="#A683E3" /></div>

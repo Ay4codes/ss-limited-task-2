@@ -61,6 +61,12 @@ input::-webkit-inner-spin-button {
   /* line-height: 1.7rem; */
   color: #3A3A3A;
 }
+.todo-item:first-child {
+  margin-top: 0;
+}
+.todo-item {
+  margin-top: 10px;
+}
 .sm-paragraph {
   font-family: 'Merriweather Sans', sans-serif;
   font-weight: 300;
